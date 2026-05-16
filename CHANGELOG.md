@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-23)
+## Unreleased (2026-05-16)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`bdc1f9b`](https://github.com/stdlib-js/stdlib/commit/bdc1f9beed8120b36f6cb9fae9a5f28c091654f1) - **docs:** add notes _(by Athan Reines)_
 -   [`c08bad2`](https://github.com/stdlib-js/stdlib/commit/c08bad2df031a450754d936aa7c10c88f98cc331) - **chore:** modernize examples and benchmarks _(by Athan Reines)_
 -   [`68e429f`](https://github.com/stdlib-js/stdlib/commit/68e429f58616af1defd8cddfcc9b62ec47c5607a) - **feat:** add `blas/base/ndarray/gasum` [(#11225)](https://github.com/stdlib-js/stdlib/pull/11225) _(by Kaustubh Patange, Athan Reines)_
 
