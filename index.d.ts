@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,18 +16,11 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var strided = require( '@stdlib/blas-base-gasum' ).ndarray;
-
-
-// MAIN //
+import { typedndarray } from '@stdlib/types/ndarray';
 
 /**
 * Computes the sum of absolute values for all elements in a one-dimensional ndarray.
@@ -38,8 +31,8 @@ var strided = require( '@stdlib/blas-base-gasum' ).ndarray;
 *
 *     -   a one-dimensional input ndarray.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing ndarrays
-* @returns {number} sum
+* @param arrays - array-like object containing ndarrays
+* @returns sum
 *
 * @example
 * var vector = require( '@stdlib/ndarray-vector-ctor' );
@@ -49,12 +42,9 @@ var strided = require( '@stdlib/blas-base-gasum' ).ndarray;
 * var y = gasum( [ x ] );
 * // returns 15.0
 */
-function gasum( arrays ) {
-	var x = arrays[ 0 ];
-	return strided( numelDimension( x, 0 ), getData( x ), getStride( x, 0 ), getOffset( x ) ); // eslint-disable-line max-len
-}
+declare function gasum<T extends typedndarray<number> = typedndarray<number>>( arrays: [ T ] ): number;
 
 
 // EXPORTS //
 
-module.exports = gasum;
+export = gasum;
